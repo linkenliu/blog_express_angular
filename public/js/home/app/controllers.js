@@ -304,7 +304,6 @@ angular.module('BlogApp.controllers', [])
         $scope.isMore = 'F';
 
         let loadLeave = (F)=> {
-            myload();
             blData.requestUrl('GET', 'leave').then(data=> {
                 let leaveList = data.data.leaveList;
                 if('Save' != F){
@@ -323,7 +322,6 @@ angular.module('BlogApp.controllers', [])
                 } else {
                     $scope.leaveList = leaveList;
                 }
-                myclose();
             });
         };
 

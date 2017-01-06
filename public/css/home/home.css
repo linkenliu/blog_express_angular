@@ -517,9 +517,68 @@ div.suji_container div.item:hover {
     padding: 10px 80px;
 }
 
-.leaveMore{
+.leaveMore {
     float: right;
     margin-top: 8px;
+}
+
+#details_container div.title {
+    text-align: center;
+}
+
+#details_container div.title h2 {
+    padding: 0;
+    margin: 0;
+}
+
+#details_container div.title div {
+    margin-top: 5px;
+}
+
+#details_container .fhr {
+    margin-top: 50px;
+}
+
+#details_container div.comment_content .comment_item {
+    padding: 0;
+    border-bottom: 1px dotted;
+    margin-top: 20px;
+}
+
+#details_container div.comment_content .comment_item .username {
+    margin: 0;
+}
+
+#details_container div.comment_content .comment_item .username span {
+    font-size: 14px;
+    font-weight: bold;
+    color: green;
+}
+
+#details_container div.comment_content .comment_item .content {
+    margin-left: 50px;
+    font-size: 14px;
+    margin-top: 8px;
+}
+
+#details_container div.comment_content .comment_item .date {
+    font-size: 12px;
+    margin-top: 5px;
+    text-align: right;
+}
+
+.commentMore {
+    float: right;
+    margin-top: 8px;
+}
+
+#details_container div.comment {
+    margin-top: 30px;
+}
+
+#sendComment {
+    margin-top: 10px;
+    padding: 10px 80px;
 }
 
 @media (max-width: 768px) {
