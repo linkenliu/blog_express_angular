@@ -1,0 +1,74 @@
+<div class="row-fluid" style="margin-top: 10px">
+    <div class="span12">
+        <h2>帖子信息
+        </h2>
+
+        <div class=" span12">
+            <a ui-sref="index.admin.post.postApp" class="btn green mini"
+               style="float: right;margin-right: 84px;margin-top: -40px"> <i
+                    class="icon-plus"></i> 新增</a>
+        </div>
+        <table class="table table-bordered">
+            <tbody>
+            <tr>
+                <td style="border-right: none">
+                    <span>类型: </span><select style="margin-top: 10px" class="small m-wrap" tabindex="1" ng-model="type" ng-options="t.value as t.text for t in types" ng-change="changePostType()">
+                </select>
+                </td>
+                <td class="alignRight" style="border-left: none">
+                    <input type="text" style="width: 280px !important;margin-top: 10px;float: right"
+                           aria-controls="sample_editable_1" ng-model="searchText" ng-change="searchPost()" class="m-wrap medium "
+                           placeholder="Search">
+                </td>
+            </tr>
+            </tbody>
+        </table>
+        <table class="table table-hover" style="table-layout:fixed;">
+            <thead>
+            <tr>
+                <th>#</th>
+                <th>标题</th>
+                <th>类型</th>
+                <th>频道</th>
+                <th>编辑</th>
+                <th>置顶</th>
+                <th>点击/评论</th>
+                <th>状态/发布</th>
+                <th>创建时间</th>
+                <th>操作</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr ng-repeat="item in postList">
+                <td>{{item.post_id}}</td>
+                <td>{{item.title}}</td>
+                <td>{{item.type.type}}</td>
+                <td>{{item.type.channel.name}}</td>
+                <td>{{item.editor.username}}</td>
+                <td>
+                    <span ng-if="item.is_top == 0" class="badge label-danger">否</span>
+                    <span ng-if="item.is_top == 1" class="badge label-success">是</span>
+                </td>
+                <td>{{item.view_count}}/{{item.comment_count}}</td>
+                <td>
+                    <span ng-if="item.state == 1"><i class=" icon-off" style="color: #3cc051"></i></span>
+                    <span ng-if="item.state == 0"><i class=" icon-off"></i></span>
+                    /
+                    <span ng-if="item.release_state == 1"><i class="icon-play" style="color:#3cc051"></i></span>
+                    <span ng-if="item.release_state == 0"><i class="icon-stop"></i></span>
+                <td>{{item.create_date | date:'MM-dd HH:mm:ss'}}</td>
+                <td>
+                    <a class="btn mini blue" ui-sref="index.admin.post.postEdit({_id:item._id})">
+                        <i class="icon-edit"></i> Edit
+                    </a>
+                    <button class="btn mini red" ng-click='postDelete(item._id,item.title)'>
+                        <i class="icon-trash"></i>&nbsp; Del
+                    </button>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div ng-include="' ./../admin/tpls/delete.html'"></div>

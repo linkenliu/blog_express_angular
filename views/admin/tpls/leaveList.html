@@ -1,0 +1,50 @@
+<div class="row-fluid" style="margin-top: 10px">
+    <div class="span12">
+        <h2>留言信息
+        </h2>
+        <table class="table table-bordered">
+            <tbody>
+            <tr>
+                <td class="alignRight" style="border-left: none">
+                    <input type="text" style="width: 280px !important;margin-top: 10px;float: right"
+                           aria-controls="sample_editable_1"  class="m-wrap medium "
+                           placeholder="Search">
+                </td>
+            </tr>
+            </tbody>
+        </table>
+        <table class="table table-hover" style="table-layout:fixed;">
+            <thead>
+            <tr>
+                <th>#</th>
+                <th>姓名</th>
+                <th>内容</th>
+                <th>状态</th>
+                <th>创建时间</th>
+                <th>操作</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr ng-repeat="item in leaveList">
+                <td>{{$index+1}}</td>
+                <td>{{item.username}}</td>
+                <td>{{item.content}}</td>
+                <td>
+                    <span ng-if="item.state == 1"><i class="badge badge-success">正常</i></span>
+                    <span ng-if="item.state != 1"><i class="badge badge-important">冻结</i></span>
+                <td>{{item.create_date | date:'MM-dd HH:mm:ss'}}</td>
+                <td>
+                    <a ng-if="item.state == 0" class="btn mini blue" ng-click="recover(item._id)">
+                        <i class="icon-ok"></i>恢复
+                    </a>
+                    <button ng-if="item.state !=0" class="btn mini red" ng-click='leaveDelete(item._id,item.content)'>
+                        <i class="icon-trash"></i>&nbsp; Del
+                    </button>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div ng-include="' ./../admin/tpls/delete.html'"></div>

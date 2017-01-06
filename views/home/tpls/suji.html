@@ -1,0 +1,7 @@
+<div class="container suji_container">
+    <div class="row">
+        <div class="col-sm-6 col-sm-offset-3 item" ng-repeat="item in posts">
+            <span ng-bind-html="item.content | toTrusted"></span>
+        </div>
+    </div>
+</div>

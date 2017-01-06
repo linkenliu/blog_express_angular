@@ -1,0 +1,49 @@
+#container{
+    margin-top: -3px;
+}
+
+.footer-hr{
+    margin-top: 0px;
+    border-top: 1px solid #cccccc !important;
+}
+
+.footer{
+    background-color: #f7f7f7;
+}
+
+.footer>p{
+    text-align: center;
+    color: #000000;
+}
+
+#top_role_name{
+    border-radius: 10% !important;
+    box-shadow: 0 0 6px #5bc0de !important;
+    margin-top: 6px;
+    border-radius:25px;
+    background-color: #5bc0de;
+}
+
+#top_role_name>span.username{
+    color: #ffffff
+}
+
+.brand:hover{
+    color: #000000 !important;
+}
+.navbar-inner{
+    padding: 10px !important;
+}
+
+.dropdown-toggle>span.username{
+    color: #23527c;
+    font-weight: bold;
+}
+.page-sidebar{
+    background-color: #F7F7F7
+}
+
+.page-sidebar .sidebar-toggler{
+    margin-bottom: 13px
+}
+

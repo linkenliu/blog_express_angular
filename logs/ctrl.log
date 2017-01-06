@@ -1,0 +1,56 @@
+[2016-12-29 15:38:28.061] [ERROR] ctrl - postOne Error:Cast to ObjectId failed for value "" at path "type.channel"
+[2016-12-29 15:39:36.847] [ERROR] ctrl - postEdit Error:Cast to ObjectId failed for value "" at path "type.channel"
+[2016-12-29 16:43:57.205] [ERROR] ctrl - postList Error:You may only yield a function, promise, generator, array, or object, but the following object was passed: "undefined"
+[2016-12-29 16:44:25.305] [ERROR] ctrl - postList Error:You may only yield a function, promise, generator, array, or object, but the following object was passed: "undefined"
+[2016-12-30 10:24:55.668] [ERROR] ctrl - postAdd Error:Post validation failed
+[2016-12-30 10:25:32.520] [ERROR] ctrl - postAdd Error:Post validation failed
+[2016-12-30 12:13:27.076] [ERROR] ctrl - delEditor Error:EditorModel.remmove is not a function
+[2016-12-30 12:13:31.511] [ERROR] ctrl - delEditor Error:EditorModel.remmove is not a function
+[2016-12-30 13:36:53.508] [ERROR] ctrl - findFriend Error:Converting circular structure to JSON
+[2016-12-30 13:37:00.890] [ERROR] ctrl - findFriend Error:Converting circular structure to JSON
+[2016-12-30 13:37:20.857] [ERROR] ctrl - findFriend Error:Converting circular structure to JSON
+[2016-12-30 13:39:29.441] [ERROR] ctrl - delFriend Error:Can't set headers after they are sent.
+[2016-12-30 13:59:48.945] [ERROR] ctrl - delModel>>${model} Error:${err.message}
+[2016-12-30 14:00:30.915] [ERROR] ctrl - delModel>>${model} Error:${err.message}
+[2016-12-30 14:03:30.550] [ERROR] ctrl - delModel>>${model} Error:${err.message}
+[2016-12-30 14:04:57.320] [ERROR] ctrl - delModel>>post Error:Model.getModel(...).findOne is not a function
+[2016-12-30 14:05:57.411] [ERROR] ctrl - delModel>>library Error:Model.getModel(...).findOne is not a function
+[2016-12-30 14:06:17.776] [ERROR] ctrl - delModel>>library Error:Model.getModel(...).findOne is not a function
+[2016-12-30 14:07:25.412] [ERROR] ctrl - delModel>>library Error:Model.getModel(...).findOne is not a function
+[2016-12-30 14:50:38.648] [ERROR] ctrl - post Error:Can't set headers after they are sent.
+[2016-12-30 14:50:44.818] [ERROR] ctrl - post Error:Can't set headers after they are sent.
+[2016-12-30 14:50:49.670] [ERROR] ctrl - post Error:Can't set headers after they are sent.
+[2016-12-30 14:50:51.420] [ERROR] ctrl - post Error:Can't set headers after they are sent.
+[2016-12-30 14:52:45.246] [ERROR] ctrl - post Error:Can't set headers after they are sent.
+[2016-12-30 14:54:04.797] [ERROR] ctrl - post Error:Can't set headers after they are sent.
+[2016-12-30 14:56:37.342] [ERROR] ctrl - post Error:Can't set headers after they are sent.
+[2016-12-30 14:56:43.025] [ERROR] ctrl - post Error:Can't set headers after they are sent.
+[2016-12-30 14:57:13.690] [ERROR] ctrl - post Error:Can't set headers after they are sent.
+[2016-12-30 14:57:19.773] [ERROR] ctrl - post Error:Can't set headers after they are sent.
+[2016-12-30 14:57:38.551] [ERROR] ctrl - post Error:Can't set headers after they are sent.
+[2016-12-30 14:57:43.371] [ERROR] ctrl - post Error:Can't set headers after they are sent.
+[2016-12-30 14:58:12.734] [ERROR] ctrl - post Error:Can't set headers after they are sent.
+[2016-12-30 14:58:14.944] [ERROR] ctrl - post Error:Can't set headers after they are sent.
+[2016-12-30 16:41:49.273] [ERROR] ctrl - findModel>>post Error:Cast to ObjectId failed for value "_id" at path "_id" for model "Post"
+[2016-12-30 16:45:54.611] [ERROR] ctrl - findModel>>post Error:Cast to ObjectId failed for value "_id" at path "_id" for model "Post"
+[2016-12-30 16:46:26.325] [ERROR] ctrl - findModel>>post Error:Cast to ObjectId failed for value "_id" at path "_id" for model "Post"
+[2017-01-04 18:37:09.923] [ERROR] ctrl - search Error:array is not defined
+[2017-01-04 18:37:11.931] [ERROR] ctrl - search Error:array is not defined
+[2017-01-04 18:37:19.195] [ERROR] ctrl - search Error:array is not defined
+[2017-01-06 10:44:59.730] [ERROR] ctrl - clickView Error:Invalid select: select only takes 1 argument
+[2017-01-06 10:45:23.890] [ERROR] ctrl - clickView Error:Invalid select: select only takes 1 argument
+[2017-01-06 10:46:37.928] [ERROR] ctrl - clickView Error:Invalid select: select only takes 1 argument
+[2017-01-06 10:48:09.928] [ERROR] ctrl - clickView Error:Invalid select: select only takes 1 argument
+[2017-01-06 10:48:26.706] [ERROR] ctrl - clickView Error:Invalid select: select only takes 1 argument
+[2017-01-06 12:17:31.356] [ERROR] ctrl - sendComment Error:You may only yield a function, promise, generator, array, or object, but the following object was passed: "undefined"
+[2017-01-06 12:18:24.477] [ERROR] ctrl - sendComment Error:You may only yield a function, promise, generator, array, or object, but the following object was passed: "undefined"
+[2017-01-06 12:22:15.302] [ERROR] ctrl - sendComment Error:Promise is not defined
+[2017-01-06 12:24:27.393] [ERROR] ctrl - sendComment Error:Promise is not defined
+[2017-01-06 12:24:58.823] [ERROR] ctrl - sendComment Error:Promise is not defined
+[2017-01-06 12:26:39.289] [ERROR] ctrl - sendComment Error:Promise is not defined
+[2017-01-06 12:30:02.428] [ERROR] ctrl - sendComment Error:Promise is not defined
+[2017-01-06 13:46:45.183] [ERROR] ctrl - sendComment Error:Promise is not defined
+[2017-01-06 13:54:18.507] [ERROR] ctrl - sendComment Error:Promise is not defined
+[2017-01-06 14:16:51.433] [ERROR] ctrl - sendComment Error:Post validation failed
+[2017-01-06 14:18:24.726] [ERROR] ctrl - sendComment Error:Post validation failed
+[2017-01-06 15:13:36.480] [ERROR] ctrl - commentList Error:Cast to ObjectId failed for value "/no/i" at path "post" for model "PostComment"

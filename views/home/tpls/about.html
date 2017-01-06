@@ -1,0 +1,48 @@
+<div class="container about_container">
+    <div class="row">
+        <div class="col-sm-6 col-sm-offset-3">
+            <h3>About Me</h3>
+            <h5>Author : linkenliu</h5>
+            <h5>Email : 3245813812@qq.com</h5>
+            <h5>Github : <a href="https://github.com/linkenliu" target="_blank">https://github.com/linkenliu</a></h5>
+
+            <h3>About Blog</h3>
+            <h5 class="about_blog">
+                本博客由nodejs开发,架构为Node+Express+Mongodb,它是一门很优秀的语言,有着活跃的社区,现在的它无论是在前端还是在后端都有着它的身影,我相信node是未来的趋势.当然还有很多人对它有种不朽的态度,甚至有人认为它的活动范围只是在前端;但事实并不是这样,现在的它无论是在前端还是在后端都有着不俗的表现.</h5>
+
+            <h3>About Framework</h3>
+            <h5>Framework : Nodejs+Express+Mongodb+angularjs</h5>
+            <h5>Github : <a href="https://github.com/linkenliu/blog_express_angular.git" target="_blank">https://github.com/linkenliu/blog_express_angular.git</a></h5>
+        </div>
+    </div>
+
+    <div class="col-sm-6 col-sm-offset-3 leave_container">
+        <h2>留言板</h2>
+        <hr/>
+        <div class="leave_content col-sm-12">
+            <div class="col-sm-12 leave_item" ng-repeat="item in leaveList">
+                <div class="username">
+                    <span>{{item.username}}说:</span>
+                </div>
+                <div class="content">
+                    {{item.content}}
+                </div>
+                <div class="col-sm-12 date">
+                    {{item.create_date | date:'MM-hh HH:mm:ss'}}
+                </div>
+            </div>
+            <div ng-if="isMore == 'T'" class="btn btn btn-default btn-xs leaveMore" ng-click="allLeave()">加载更多</div>
+            <div ng-if="isMore == 'S'" class="btn btn btn-default btn-xs leaveMore" ng-click="sComment()">点击收缩</div>
+        </div>
+        <div class="col-sm-12">
+            <h4>您的留言:</h4>
+            <textarea class="form-control" rows="3" ng-model="leave.content"></textarea>
+            <h4>您的大名:</h4>
+            <input class="form-control" ng-model="leave.username"/>
+            <button type="button" id="sendLeave"
+                    ng-click="sendLeave()" class="btn btn-info">Send
+            </button>
+        </div>
+    </div>
+
+</div>

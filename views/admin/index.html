@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="BlogApp">
+<head>
+    <meta name="viewport" content="initial-scale=1, user-scalable=0, minimal-ui">
+    <meta charset="UTF-8">
+    <base href="/">
+    <title>my brower blog</title>
+    <% include layout/header.html %>
+</head>
+<body class="page-header-fixed">
+<div ui-view="topbar"></div>
+<div id="container" class="page-container row-fluid">
+    <div ui-view="vcon"></div>
+</div>
+<div ui-view="footer"></div>
+</body>
+</html>
+

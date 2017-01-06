@@ -1,0 +1,45 @@
+<div class="container" id="details_container">
+    <div class="col-sm-6 col-sm-offset-3 post_item">
+        <div class="title" style="text-align: center">
+            <h2 style="padding:0;margin:0;">{{post.title}}</h2>
+            <div style="margin-top: 5px">
+                <span>发布于:{{post.create_date | date:'MM-dd HH:mm:ss'}}</span>
+                &nbsp;&nbsp;&nbsp;
+                <span>浏览/评论:{{post.view_count}}/{{post.comment_count}}</span>
+            </div>
+        </div>
+        <hr/>
+        <div on-finish-render-filters ng-bind-html="post.content | toTrusted">
+        </div>
+        <hr style="margin-top: 50px"/>
+        <h2>留言板</h2>
+        <hr/>
+        <div class="comment_content col-sm-12">
+            <div class="col-sm-12" style="padding: 0;border-bottom: 1px dotted;margin-top: 20px" ng-repeat="item in commentList">
+                <div style="margin: 0">
+                    <span style="font-size: 14px;font-weight: bold;color: green">{{item.username}}说:</span>
+                </div>
+                <div style="margin-left: 50px;font-size: 14px;margin-top: 8px;">
+                    {{item.content}}
+                </div>
+                <div class="col-sm-12" style="font-size: 12px;margin-top: 5px;text-align: right">
+                    {{item.create_date | date:'MM-hh HH:mm:ss'}}
+                </div>
+            </div>
+            <div ng-if="isMore == 'T'" class="btn btn btn-default btn-xs commentMore" style="float: right;margin-top: 8px" ng-click="allComment()">加载更多</div>
+            <div ng-if="isMore == 'S'" class="btn btn btn-default btn-xs commentMore" style="float: right;margin-top: 8px" ng-click="sComment()">点击收缩</div>
+        </div>
+
+        <div class="comment col-sm-12" style="margin-top: 30px">
+            <h4>您的留言:</h4>
+            <textarea class="form-control" rows="3" ng-model="user.content"></textarea>
+            <h4>您的大名:</h4>
+            <input class="form-control" ng-model="user.username"/>
+            <h4>电子邮箱:</h4>
+            <input class="form-control" ng-model="user.email"/>
+            <h4>个人网站:</h4>
+            <input class="form-control" ng-model="user.personage_site"/>
+            <button style="margin-top: 10px;padding: 10px 80px" type="button" id="sendComment" ng-click="sendComment(post._id)" class="btn btn-info">Send</button>
+        </div>
+    </div>
+</div>

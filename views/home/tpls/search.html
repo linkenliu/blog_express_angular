@@ -1,0 +1,48 @@
+<div class="container" id="search_container">
+    <div class="row">
+        <div class="search-nav col-sm-12">
+            <ul>
+                <li ng-repeat="item in searchNavs"><a
+                        ng-class="{search_active:item.value==value,active1:item.value!=value}"
+                        ng-click="ck(item.value)">{{item.text}}</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class=" post_item col-sm-6 col-sm-offset-3" id="all">
+        <div class="col-sm-12 item_container" ng-repeat="item in data.data.allList"
+             ui-sref="index.home.post.details({_id:item._id})">
+            <div class="col-sm-9 text">#<span class="item_count">{{item.view_count}}/{{item.comment_count}}</span><span
+                    class="istop" ng-if="item.is_top">置顶</span>{{item.title}}
+            </div>
+            <div class="col-sm-3 date">{{item.create_date | date:'MM-dd HH:mm'}}</div>
+        </div>
+    </div>
+
+    <div class=" post_item col-sm-6 col-sm-offset-3" id="post">
+        <div class="col-sm-12 item_container" ng-repeat="item in data.data.postList"
+             ui-sref="index.home.post.details({_id:item._id})">
+            <div class="col-sm-9 text">#<span class="item_count">{{item.view_count}}/{{item.comment_count}}</span><span
+                    class="istop" ng-if="item.is_top">置顶</span>{{item.title}}
+            </div>
+            <div class="col-sm-3 date">{{item.create_date | date:'MM-dd HH:mm'}}</div>
+        </div>
+    </div>
+
+    <div class="suji_container post_item search_suji_container" id="suji" style="display: none">
+        <div class="col-sm-6 col-sm-offset-3 item" ng-repeat="item in data.data.sujiList">
+            <span ng-bind-html="item.content | toTrusted"></span>
+        </div>
+    </div>
+
+    <div class="container demo_container post_item" id="demo" style="display: none;"
+         ng-if="data.data.demoList.length>0">
+        <div class="item" on-finish-render-filters ng-repeat="item in data.data.demoList" ng-mouseover="mouseover()"
+             ui-sref="index.home.post.details({_id:item._id})">
+            <div class="photo"><img src="{{item.cover}}"></div>
+            <div class="rsp"></div>
+            <div class="text"><a href=""><h6>{{item.title}}</h6></a></div>
+        </div>
+    </div>
+
+</div>

@@ -1,0 +1,6 @@
+<article class="home-article">
+    <div class="home-article-content" ng-repeat="item in channels" ui-sref="index.home.channelPost({_id:item._id})">
+        <div class="home-article-item" style="background-image: url('{{item.cover}}')"></div>
+        <div class="home-article-item-text">{{item.name}}</div>
+    </div>
+</article>

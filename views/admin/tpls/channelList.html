@@ -1,0 +1,163 @@
+<div class="row-fluid" style="margin-top: 10px">
+    <div class="span12">
+        <h2>频道信息
+        </h2>
+        <div class=" span12">
+            <a ng-click="showChannelModal()"  class="btn green mini" style="float: right;margin-right: 84px;margin-top: -40px"> <i
+                    class="icon-plus"></i> 新增</a>
+        </div>
+        <table class="table table-bordered">
+            <tbody>
+            <tr>
+                <td class="alignRight" style="border-left: none">
+                    <input type="text" style="width: 280px !important;margin-top: 10px;float: right" aria-controls="sample_editable_1" ng-model="searchText" ng-change="searchChannel()" class="m-wrap medium "  placeholder="Search">
+                </td>
+            </tr>
+            </tbody>
+        </table>
+        <table class="table table-hover" style="table-layout:fixed;">
+            <thead>
+            <tr>
+                <th>#</th>
+                <th>名称</th>
+                <th>Logo</th>
+                <th>Color</th>
+                <th>BScolor</th>
+                <th>排序</th>
+                <th>状态</th>
+                <th>创建时间</th>
+                <th>操作</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr ng-repeat="item in channelList">
+                <th>{{$index+1}}</th>
+                <td>{{item.name}}</td>
+                <td>
+                    <img src="{{item.cover}}" style="border-radius: 50% !important;">
+                </td>
+
+                <td>{{item.color}}</td>
+                <td>
+                    {{item.box_shadow_color}}
+                </td>
+                <td>
+                    {{item.sort}}
+                </td>
+                <td>
+                    <span ng-if="item.state == 1"><i class="badge badge-success">正常</i></span>
+                    <span ng-if="item.state != 1"><i class="badge badge-important">冻结</i></span>
+                </td>
+                <td>
+                    {{item.create_date | date:'MM-dd HH:mm:ss'}}
+                </td>
+                <td>
+                    <button class="btn mini blue" ng-click='showChannelModal(item._id)'>
+                        <i class="icon-trash" style="margin-left: 5px"></i> Edit
+                    </button>
+                    <button class="btn mini red" ng-click='deleteChannel(item._id,item.name)'>
+                        <i class="icon-trash" style="margin-left: 5px"></i> Del
+                    </button>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+</div>
+
+
+<div class="modal" id="channelModal" tabindex="0" role="dialog" aria-labelledby="gridSystemModalLabel"
+     style="display:none;overflow-y:auto">
+
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header center">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"
+                        ng-click="showModal('channelModal')"></button>
+                <h2 class="modal-title" >{{modal_title}}</h2>
+            </div>
+            <form class="form-horizontal" id="frmSaveStory">
+                <div class="modal-body">
+                    <div class="box-content">
+                        <div class="row-fluid">
+                            <div class="span12">
+                                <div class="control-group">
+                                    <label class="control-label" style="width: 100px">标题:</label>
+                                    <input type="text" placeholder="请输入标题"  ng-model="channel.name" required="required" class="m-wrap span9">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row-fluid">
+                            <div class="span12">
+                                <div class="control-group">
+                                    <label class="control-label" style="width: 100px">Logo:</label>
+                                    <div file-input="file" on-change="uploadChannelLogo(this)"></div><br/>
+                                    <img src="{{channel.cover}}" class="image_url" style="max-width: 80px;max-height: 80px">
+                                    <input type="hidden" value="{{channel.cover}}" ng-model="channel.cover" name="cover" >
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row-fluid">
+                            <div class="span12">
+                                <div class="control-group">
+                                    <label class="control-label" style="width: 100px">Color:</label>
+                                    <input type="text" placeholder="请输入Color" ng-model="channel.color"  class="m-wrap span9">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row-fluid">
+                            <div class="span12">
+                                <div class="control-group">
+                                    <label class="control-label" style="width: 100px">BScolor:</label>
+                                    <input type="text" placeholder="请输入BScolor" ng-model="channel.box_shadow_color"  class="m-wrap span9">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row-fluid">
+                            <div class="span12">
+                                <div class="control-group">
+                                    <label class="control-label" style="width: 100px">排序:</label>
+                                    <input type="number" placeholder="排序" ng-model="channel.sort"  class="m-wrap span9">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row-fluid">
+                            <div class="span12">
+                                <div class="control-group">
+                                    <label class="control-label" style="width: 100px">发布:</label>
+                                    <div class="" style="margin-top: 6px">
+                                        <label class="radio-inline" style="display: inline-block">
+                                            <input type="radio" style="margin-top: -2px" checked="checked" name="release_state" ng-model="channel.state"
+                                                   value="1"> 发布
+                                        </label>
+                                        <label style="display: inline-block">
+                                            <input type="radio" style="margin-top: -2px" ng-model="channel.state"
+                                                   value="0"> 未发布
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="showModal('channelModal')">
+                    <i
+                            class="icon-remove"></i> 取消
+
+                </button>
+                <button type="button" class="btn blue" ng-click="saveChannel()"><i
+                        class="icon-ok"></i> 确定
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div ng-include="' ./../admin/tpls/delete.html'"></div>
+
+
+

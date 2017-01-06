@@ -1,0 +1,6 @@
+<nav>
+    <span ng-click="navClick(item.sref,item.value)" ng-repeat="item in navs" ng-class="{active:item.value==value,active1:item.value!=value}">{{item.text}}</span>
+    <br/>
+    <input type="search" id="infinitySearch" ng-keyup="myKeyup($event)" class="SearchInput" ng-model="searchText" placeholder="Search">
+    <label id="searchButton" for="infinitySearch" ng-click="search()" style="display: inline; opacity: 1;margin-top: 10px;margin-left: -75px"></label>
+</nav>

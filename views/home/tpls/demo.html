@@ -1,0 +1,9 @@
+<div class="container demo_container">
+    <div class="row">
+        <div class="item" on-finish-render-filters ng-repeat="item in posts" ng-mouseover="mouseover()" ui-sref="index.home.post.details({_id:item._id})">
+            <div class="photo"><img src="{{item.cover}}"></div>
+            <div class="rsp"></div>
+            <div class="text"><a href=""><h6>{{item.title}}</h6></a></div>
+        </div>
+    </div>
+</div>

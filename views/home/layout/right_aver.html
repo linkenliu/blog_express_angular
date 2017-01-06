@@ -1,0 +1,12 @@
+<div id="add" is-show="hide" ng-click="moveAver()" ></div>
+<div id="right-menu">
+    <div class="menu-title">
+        <span ng-class="{averactive:item.value==value,averactive1:item.value!=value}" ng-click="toGo(item.value)" ng-repeat="item in averList">{{item.text}}</span>
+    </div>
+    <div id="recommend">
+        <div id="right-content">
+            <div ng-if="libraryList"><a class="col-sm-12 col-xs-12" href="{{item.url}}" target="_blank" ng-repeat="item in libraryList">{{$(index+1)}}{{item.title}}</a></div>
+            <div ng-if="friendList"><a class="col-sm-12 col-xs-12" href="{{item.url}}" target="_blank" ng-repeat="item in friendList">{{$(index+1)}} {{item.name}}</a></div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,74 @@
+
+<div class="page-sidebar nav-collapse collapse">
+    <ul class="page-sidebar-menu">
+        <li>
+            <div class="sidebar-toggler hidden-phone"></div>
+        </li>
+        <li class="" id="adminIndex_li">
+            <a ui-sref="index.admin.index" class="ajax-link">
+                <i class="icon-home"></i>
+                <span class="title" >系统概述</span>
+                <span class="selected"></span>
+            </a>
+        </li>
+        <li class="" >
+            <a ui-sref="index.admin.editor" class="ajax-link">
+                <i class="icon-user"></i>
+                <span class="title" >用户信息</span>
+                <span class="selected"></span>
+            </a>
+        </li>
+        <li class="" >
+            <a ui-sref="index.admin.post" class="ajax-link">
+                <i class="icon-paste"></i>
+                <span class="title" >帖子信息</span>
+                <span class="selected"></span>
+            </a>
+        </li>
+        <li class="" >
+            <a ui-sref="index.admin.comment" class="ajax-link">
+                <i class="icon-flickr"></i>
+                <span class="title" >评论信息</span>
+                <span class="selected"></span>
+            </a>
+        </li>
+        <li class="" >
+            <a ui-sref="index.admin.channel" class="ajax-link">
+                <i class="icon-dashboard"></i>
+                <span class="title" >频道信息</span>
+                <span class="selected"></span>
+            </a>
+        </li>
+        <li class="" >
+            <a ui-sref="index.admin.library" class="ajax-link">
+                <i class="icon-group"></i>
+                <span class="title" >内库信息</span>
+                <span class="selected"></span>
+            </a>
+        </li>
+        <li class="" >
+            <a ui-sref="index.admin.friend" class="ajax-link">
+                <i class="icon-twitter"></i>
+                <span class="title" >友情信息</span>
+                <span class="selected"></span>
+            </a>
+        </li>
+        <li class="" >
+            <a ui-sref="index.admin.leave" class="ajax-link">
+                <i class="icon-linkedin"></i>
+                <span class="title" >留言信息</span>
+                <span class="selected"></span>
+            </a>
+        </li>
+    </ul>
+</div>
+
+
+<script>
+    $(function () {
+        $(".page-sidebar li").on('click', function () {
+            $(".page-sidebar li").removeClass('active');
+            $(this).addClass('active');
+        });
+    });
+</script>
