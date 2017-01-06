@@ -132,9 +132,9 @@ angular.module('BlogApp.controllers', [])
         let loadComment = (F)=> {
             blData.requestUrl('GET', 'comment', {_id: _id}).then(data=> {
                 let commentList = data.data.commentList;
-                if ('Save' != F) {
-                    if (!F) {
-                        if (commentList.length > 5) $scope.isMore = 'T';
+                if('Save' != F){
+                    if(!F){
+                        if(commentList.length>5) $scope.isMore = 'T';
                     }
                 }
                 if ('F' == $scope.F) {
@@ -154,14 +154,14 @@ angular.module('BlogApp.controllers', [])
         loadComment();
 
 
-        $scope.allComment = ()=> {
+        $scope.allComment = ()=>{
             loadComment(true);
             $scope.F = 'T';
             $scope.isMore = 'S';
         };
 
 
-        $scope.sComment = ()=> {
+        $scope.sComment = ()=>{
             $scope.F = 'F';
             $scope.isMore = 'T';
             loadComment(true);
@@ -307,9 +307,9 @@ angular.module('BlogApp.controllers', [])
             myload();
             blData.requestUrl('GET', 'leave').then(data=> {
                 let leaveList = data.data.leaveList;
-                if ('Save' != F) {
-                    if (!F) {
-                        if (leaveList.length > 5) $scope.isMore = 'T';
+                if('Save' != F){
+                    if(!F){
+                        if(leaveList.length>5) $scope.isMore = 'T';
                     }
                 }
                 if ('F' == $scope.F) {
@@ -332,13 +332,13 @@ angular.module('BlogApp.controllers', [])
         $scope.leave = {};
 
         $scope.sendLeave = ()=> {
-            if (!$scope.leave.content) {
+            if(!$scope.leave.content){
                 return layer.msg('请输入留言内容', function () {
                 });
-            } else if (!$scope.leave.username) {
+            }else if(!$scope.leave.username){
                 return layer.msg('请输入您的大名', function () {
                 });
-            } else {
+            }else{
                 $("#sendComment").attr('disabled', 'disabled');
                 $http.post('/home/v1/leave', {object: $scope.leave}).success(data=> {
                     $("#sendComment").removeAttr('disabled');
@@ -354,10 +354,19 @@ angular.module('BlogApp.controllers', [])
         };
 
 
-        $scope.allLeave = ()=> {
+        $scope.allLeave = ()=>{
+            loadLeave(true);
             $scope.F = 'T';
-            loadLeave();
+            $scope.isMore = 'S';
         };
+
+
+        $scope.sLeave = ()=>{
+            $scope.F = 'F';
+            $scope.isMore = 'T';
+            loadLeave(true);
+        };
+
 
 
     }]);
