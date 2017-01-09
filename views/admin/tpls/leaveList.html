@@ -16,7 +16,7 @@
         <table class="table table-hover" style="table-layout:fixed;">
             <thead>
             <tr>
-                <th>#</th>
+                <th>#<a href="javascript:;" ng-model="select_all" ng-click="selectAll()">{{Text}}</a><a ng-click="batchDel()" class="btn mini red">删除</a></th>
                 <th>姓名</th>
                 <th>内容</th>
                 <th>状态</th>
@@ -26,7 +26,7 @@
             </thead>
             <tbody>
             <tr ng-repeat="item in leaveList">
-                <td>{{$index+1}}</td>
+                <td>{{$index+1}}<input type="checkbox" ng-checked="is_selected"  value="{{item._id}}" style="margin-top: -2px"/></td>
                 <td>{{item.username}}</td>
                 <td>{{item.content}}</td>
                 <td>

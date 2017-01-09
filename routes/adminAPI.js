@@ -78,6 +78,9 @@ router.put('/leave',leaveCtrl.updateLeave);
 //delete model
 router.delete('/deleteModel',publicCtrl.delModel);
 
+//batch delete model
+router.delete('/batchDeleteModel',publicCtrl.batchDeleteModel);
+
 //find model
 router.get('/findModel',publicCtrl.findModel);
 

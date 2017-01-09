@@ -54,3 +54,26 @@
 [2017-01-06 14:16:51.433] [ERROR] ctrl - sendComment Error:Post validation failed
 [2017-01-06 14:18:24.726] [ERROR] ctrl - sendComment Error:Post validation failed
 [2017-01-06 15:13:36.480] [ERROR] ctrl - commentList Error:Cast to ObjectId failed for value "/no/i" at path "post" for model "PostComment"
+[2017-01-09 11:38:51.284] [ERROR] ctrl - batchDeleteModel>>comment Error:model is not defined
+[2017-01-09 11:39:03.710] [ERROR] ctrl - batchDeleteModel>>comment Error:model is not defined
+[2017-01-09 11:40:41.747] [ERROR] ctrl - batchDeleteModel>>comment Error:model is not defined
+[2017-01-09 11:41:31.855] [ERROR] ctrl - batchDeleteModel>>comment Error:model is not defined
+[2017-01-09 11:42:21.593] [ERROR] ctrl - batchDeleteModel>>comment Error:model is not defined
+[2017-01-09 11:43:45.273] [ERROR] ctrl - batchDeleteModel>>comment Error:model is not defined
+[2017-01-09 11:44:38.174] [ERROR] ctrl - batchDeleteModel>>comment Error:model is not defined
+[2017-01-09 11:45:28.944] [ERROR] ctrl - batchDeleteModel>>comment Error:model is not defined
+[2017-01-09 11:45:39.562] [ERROR] ctrl - batchDeleteModel>>comment Error:model is not defined
+[2017-01-09 11:47:12.271] [ERROR] ctrl - batchDeleteModel>>comment Error:model is not defined
+[2017-01-09 11:47:51.091] [ERROR] ctrl - batchDeleteModel>>comment Error:model is not defined
+[2017-01-09 11:49:04.774] [ERROR] ctrl - batchDeleteModel>>comment Error:model is not defined
+[2017-01-09 11:56:00.588] [ERROR] ctrl - batchDeleteModel>>comment Error:You may only yield a function, promise, generator, array, or object, but the following object was passed: "undefined"
+[2017-01-09 11:57:19.724] [ERROR] ctrl - batchDeleteModel>>comment Error:You may only yield a function, promise, generator, array, or object, but the following object was passed: "undefined"
+[2017-01-09 11:57:57.513] [ERROR] ctrl - batchDeleteModel>>comment Error:You may only yield a function, promise, generator, array, or object, but the following object was passed: "undefined"
+[2017-01-09 11:59:10.572] [ERROR] ctrl - batchDeleteModel>>comment Error:model is not defined
+[2017-01-09 11:59:40.928] [ERROR] ctrl - batchDeleteModel>>comment Error:model is not defined
+[2017-01-09 12:02:01.380] [ERROR] ctrl - batchDeleteModel>>comment Error:You may only yield a function, promise, generator, array, or object, but the following object was passed: "undefined"
+[2017-01-09 12:05:50.751] [ERROR] ctrl - batchDeleteModel>>comment Error:You may only yield a function, promise, generator, array, or object, but the following object was passed: "undefined"
+[2017-01-09 12:08:41.338] [ERROR] ctrl - batchDeleteModel>>comment Error:You may only yield a function, promise, generator, array, or object, but the following object was passed: "[object Object]"
+[2017-01-09 12:10:39.332] [ERROR] ctrl - batchDeleteModel>>comment Error:You may only yield a function, promise, generator, array, or object, but the following object was passed: "[object Object]"
+[2017-01-09 12:13:26.789] [ERROR] ctrl - batchDeleteModel>>comment Error:ids.forEach is not a function
+[2017-01-09 13:20:50.862] [ERROR] ctrl - delModel>>comment Error:_id is not defined

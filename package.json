@@ -17,6 +17,13 @@
     "express": "~4.13.1",
     "express-session": "^1.14.2",
     "fs-extra": "^1.0.0",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^6.1.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-jshint": "^2.0.4",
+    "gulp-minify-css": "^1.2.4",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^2.0.0",
     "image-size": "^0.5.1",
     "jade": "^1.11.0",
     "log4js": "^1.1.0",
@@ -35,5 +42,9 @@
     "socket.io": "^1.7.2",
     "to-markdown": "^3.0.3",
     "uuid": "^3.0.1"
+  },
+  "devDependencies": {
+    "gulp-jshint": "^2.0.4",
+    "jshint": "^2.9.4"
   }
 }
