@@ -48,5 +48,7 @@ router.post('/home/v1/leave',leaveCtrl.saveLeave);
 //leave list information
 router.get('/home/v1/leave',leaveCtrl.leaveList);
 
+router.get('/test',leaveCtrl.test);
+
 
 module.exports = router;

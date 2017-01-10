@@ -291,15 +291,18 @@ angular.module('BlogApp.controllers', [])
 
         //delete post
         $scope.destroy = ()=> {
-            blData.requestUrl('DELETE', 'deleteModel', {_id: $scope.delete_id, model: 'post'}).then((data)=> {
-                if (data.success) {
-                    $("#deleteModal").hide();
-                    loadPost();
-                } else {
-                    $("#deleteModal").hide();
-                    myalert(2, '删除失败');
-                    myclose();
-                }
+
+            blData.requestUrl('DELETE', 'deleteModel', {_id: $scope.delete_id, model: 'post'}).then(()=> {
+                blData.requestUrl('DELETE', 'deleteModel', {_id: $scope.delete_id, model: 'comment'}).then((data)=> {
+                    if (data.success) {
+                        $("#deleteModal").hide();
+                        loadPost();
+                    } else {
+                        $("#deleteModal").hide();
+                        myalert(2, '删除失败');
+                        myclose();
+                    }
+                });
             });
         };
 
@@ -441,6 +444,7 @@ angular.module('BlogApp.controllers', [])
         $scope.postEdit = ()=> {
             let post = $scope.post;
             $http.put('/admin/post', {object: post}).success((data)=> {
+                console.log(data)
                 if (data.success) {
                     $location.path("/admin/post");
                 } else {

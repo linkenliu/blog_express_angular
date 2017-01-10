@@ -156,6 +156,7 @@ exports.postEdit = (req, res)=> {
     object.type = type;
     let _id = object._id;
     co(function*() {
+        delete object._id;
         yield PostModel.update({_id: _id}, object);
         res.send(responseObj);
     }).catch((err)=> {
