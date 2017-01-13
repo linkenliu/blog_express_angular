@@ -38,8 +38,3 @@ exports.saveLeave = (req, res)=> {
 };
 
 
-exports.test = (req,res)=>{
-    LeaveModel.findByIdAndRemove({_id:'58732b4d54cd08073e206791'},function(err,obj){
-        res.send('123')
-    });
-};

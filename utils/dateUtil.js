@@ -21,6 +21,14 @@ exports.currentDate = () => {
 };
 
 
+exports.calculateDate = (num) =>{
+    let date = moment().subtract(num,'days').calendar();
+    let strDate = date.split('/');
+    date = strDate[2] + "-" + strDate[0] + "-" + strDate[1];
+    return date;
+};
+
+
 exports.formatDate = (date) => {
     return moment(date).format(API_DATE_FORMAT);
 };
@@ -198,3 +206,4 @@ exports.convertDateTime = function (date) {
         return date;
     }
 };
+

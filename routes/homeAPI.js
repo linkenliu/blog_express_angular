@@ -48,7 +48,14 @@ router.post('/home/v1/leave',leaveCtrl.saveLeave);
 //leave list information
 router.get('/home/v1/leave',leaveCtrl.leaveList);
 
-router.get('/test',leaveCtrl.test);
+//read post
+router.get('/home/v1/readPost',postCtrl.readPost);
 
+//recent release
+router.get('/home/v1/recentPost',postCtrl.recentPost);
+
+router.get('/home/v1/correlationPost',postCtrl.correlationPost);
+
+router.get('/home/v1/search2',postCtrl.search2);
 
 module.exports = router;

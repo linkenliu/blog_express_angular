@@ -4,6 +4,7 @@ const
     PostModel = require('../../models/PostModel'),
     dateUtil = require('../../utils/dateUtil'),
     ChannelModel = require('../../models/ChannelModel'),
+    LibraryModel = require('../../models/LibraryModel'),
     PostCommentModel = require('../../models/PostCommentModel'),
     co = require('co');
 
@@ -151,11 +152,102 @@ exports.commentList = (req, res)=> {
         return res.send(responseObj);
     }
     co(function*() {
-        let commentList = yield PostCommentModel.find({post: _id}).sort({create_date:-1}).exec();
+        let commentList = yield PostCommentModel.find({post: _id}).sort({create_date: -1}).exec();
         responseObj.data.commentList = commentList;
         res.send(responseObj);
     }).catch(err=> {
         logger.error("commentList Error:" + err.message);
+        responseObj.errMsg(false, err.message);
+        return res.send(responseObj);
+    });
+};
+
+/**
+ * read according to the amount of reading posts limit 5
+ * @param req
+ * @param res
+ */
+exports.readPost = (req, res) => {
+    let responseObj = Response();
+    co(function*() {
+        let postList = yield PostModel.find({release_state: 1}).sort({view_count: -1}).limit(5).exec();
+        responseObj.data.postList = postList;
+        return res.send(responseObj);
+    }).catch(err=> {
+        logger.err("readPost Error:" + err.message);
+        responseObj.errMsg(false, err.message);
+        return res.send(responseObj);
+    });
+};
+
+//recent release limit 5
+exports.recentPost = (req, res)=> {
+    let responseObj = Response();
+    let calculateDate = dateUtil.calculateDate(30);
+    co(function*() {
+        let postList = yield PostModel.find({create_date: {$gte: calculateDate}}).limit(5).exec();
+        responseObj.data.postList = postList;
+        return res.send(responseObj);
+    }).catch(err=> {
+        logger.error("recentPost Error:" + err.message);
+        responseObj.errMsg(false, err.message);
+        return res.send(responseObj);
+    });
+};
+
+exports.correlationPost = (req, res) => {
+    let type = req.query.type;
+    let _id = req.query._id;
+    let responseObj = Response();
+    let params = {};
+    if (_id) {
+        params._id = {$ne: _id};
+    }
+    co(function*() {
+        if ('null' == type || 'undefined' == type) {
+            params['type.type'] = 'demo';
+        } else {
+            params['type.channel'] = type;
+        }
+        let postList = yield PostModel.find(params).exec();
+        responseObj.data.postList = postList;
+        return res.send(responseObj);
+    }).catch(err=> {
+        logger.error("correlationPost Error:" + err.message);
+        responseObj.errMsg(false, err.message);
+        return res.send(responseObj);
+    });
+};
+
+
+exports.search2 = (req, res)=> {
+    let object = req.query.object;
+    if (object) object = JSON.parse(object);
+    let searchText = object.searchText;
+    let tag = object.tag;
+    let responseObj = Response();
+    let params = {};
+    let params2 = {};
+    if (searchText && 'null' != searchText && 'undefined' != searchText) {
+        params.title = new RegExp(searchText, 'i');
+        params2.title = new RegExp(searchText, 'i');
+    }
+    if (tag && 'null' != tag && 'undefined' != tag) {
+        params['type.channel'] = tag;
+    }
+    co(function*() {
+        let [postList, libraryList] = yield Promise.all([
+            PostModel.find(params).where({release_state: 1}).sort({
+                is_top: -1,
+                create_date: -1
+            }).exec(),
+            LibraryModel.find(params2).where({state: 1}).exec()
+        ]);
+        responseObj.data.postList = postList;
+        responseObj.data.libraryList = libraryList;
+        return res.send(responseObj);
+    }).catch(err=> {
+        logger("search2 Error:" + err.message);
         responseObj.errMsg(false, err.message);
         return res.send(responseObj);
     });
