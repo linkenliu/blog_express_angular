@@ -3,16 +3,16 @@ module .exports = {
     debug: true,
     service_path:'http://127.0.0.1:7000/',
     "qiniu_config":{
-        "accessKey":"DCqIYmhHuIgLdfUWpcn4Lzo-1QZ1juBALUTFVTkb",
-        "secretKey":"Bp7Io4kyOOmN9HEiFJ8GNhKfcUk9fV6IDywtEuC0"
+        "accessKey":"****",
+        "secretKey":"****"
     },
-    "mongoDB":"mongodb://127.0.0.1:27017/blog_express?authSource=admin",
+    "mongoDB":"mongodb://127.0.0.1:27017/***",
     options : {
         db: { native_parser: true },
         server: { poolSize: 5 },
         replset: { rs_name: 'userAdmin' },
-        user: 'root',
-        pass: 'tiger'
+        user: '***',
+        pass: '***'
     },
     "redisDB": {
         "dbhost": "127.0.0.1",
