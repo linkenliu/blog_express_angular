@@ -100,3 +100,109 @@
 [2017-01-12 17:23:04.309] [ERROR] ctrl - correlationPost Error:Cast to ObjectId failed for value "null" at path "type.channel" for model "Post"
 [2017-01-12 17:23:44.007] [ERROR] ctrl - correlationPost Error:Cast to ObjectId failed for value "null" at path "type.channel" for model "Post"
 [2017-01-12 17:24:19.921] [ERROR] ctrl - correlationPost Error:Cast to ObjectId failed for value "null" at path "type.channel" for model "Post"
+[2017-01-17 13:15:27.809] [ERROR] ctrl - library Error:not authorized on blog_express to execute command { find: "libraries", filter: { state: 1 } }
+[2017-01-17 13:15:38.592] [ERROR] ctrl - library Error:not authorized on blog_express to execute command { find: "libraries", filter: { state: 1 } }
+[2017-01-17 13:15:43.290] [ERROR] ctrl - library Error:not authorized on blog_express to execute command { find: "libraries", filter: { state: 1 } }
+[2017-01-17 13:21:46.030] [ERROR] ctrl - post Error:not authorized on admin to execute command { find: "posts", filter: { type.type: "post", release_state: 1 }, sort: { is_top: -1, create_date: -1 } }
+[2017-01-17 13:21:46.035] [ERROR] ctrl - library Error:not authorized on admin to execute command { find: "libraries", filter: { state: 1 } }
+[2017-01-17 13:21:48.053] [ERROR] ctrl - post Error:not authorized on admin to execute command { find: "posts", filter: { type.type: "demo", release_state: 1 }, sort: { is_top: -1, create_date: -1 } }
+[2017-01-17 13:21:53.150] [ERROR] ctrl - post Error:not authorized on admin to execute command { find: "posts", filter: { type.type: "demo", release_state: 1 }, sort: { is_top: -1, create_date: -1 } }
+[2017-01-17 13:21:53.154] [ERROR] ctrl - library Error:not authorized on admin to execute command { find: "libraries", filter: { state: 1 } }
+[2017-01-17 13:21:54.070] [ERROR] ctrl - post Error:not authorized on admin to execute command { find: "posts", filter: { type.type: "demo", release_state: 1 }, sort: { is_top: -1, create_date: -1 } }
+[2017-01-17 13:21:54.074] [ERROR] ctrl - library Error:not authorized on admin to execute command { find: "libraries", filter: { state: 1 } }
+[2017-01-17 13:25:19.007] [ERROR] ctrl - post Error:not authorized on blog_express to execute command { find: "posts", filter: { type.type: "demo", release_state: 1 }, sort: { is_top: -1, create_date: -1 } }
+[2017-01-17 13:25:19.011] [ERROR] ctrl - library Error:not authorized on blog_express to execute command { find: "libraries", filter: { state: 1 } }
+[2017-01-17 13:25:19.826] [ERROR] ctrl - post Error:not authorized on blog_express to execute command { find: "posts", filter: { type.type: "demo", release_state: 1 }, sort: { is_top: -1, create_date: -1 } }
+[2017-01-17 13:25:19.826] [ERROR] ctrl - library Error:not authorized on blog_express to execute command { find: "libraries", filter: { state: 1 } }
+[2017-01-17 13:25:20.611] [ERROR] ctrl - post Error:not authorized on blog_express to execute command { find: "posts", filter: { type.type: "post", release_state: 1 }, sort: { is_top: -1, create_date: -1 } }
+[2017-01-17 13:25:21.801] [ERROR] ctrl - post Error:not authorized on blog_express to execute command { find: "posts", filter: { type.type: "demo", release_state: 1 }, sort: { is_top: -1, create_date: -1 } }
+[2017-01-17 13:25:22.408] [ERROR] ctrl - post Error:not authorized on blog_express to execute command { find: "posts", filter: { type.type: "suji", release_state: 1 }, sort: { is_top: -1, create_date: -1 } }
+[2017-01-17 13:28:48.534] [ERROR] ctrl - post Error:not authorized on blog_express to execute command { find: "posts", filter: { type.type: "suji", release_state: 1 }, sort: { is_top: -1, create_date: -1 } }
+[2017-01-17 13:28:48.539] [ERROR] ctrl - library Error:not authorized on blog_express to execute command { find: "libraries", filter: { state: 1 } }
+[2017-01-17 13:28:49.339] [ERROR] ctrl - post Error:not authorized on blog_express to execute command { find: "posts", filter: { type.type: "suji", release_state: 1 }, sort: { is_top: -1, create_date: -1 } }
+[2017-01-17 13:28:49.343] [ERROR] ctrl - library Error:not authorized on blog_express to execute command { find: "libraries", filter: { state: 1 } }
+[2017-01-17 13:28:52.644] [ERROR] ctrl - post Error:not authorized on blog_express to execute command { find: "posts", filter: { type.type: "post", release_state: 1 }, sort: { is_top: -1, create_date: -1 } }
+[2017-01-17 13:29:16.351] [ERROR] ctrl - library Error:not authorized on blog_express to execute command { find: "libraries", filter: { state: 1 } }
+[2017-01-17 13:29:18.879] [ERROR] ctrl - post Error:not authorized on blog_express to execute command { find: "posts", filter: { type.type: "demo", release_state: 1 }, sort: { is_top: -1, create_date: -1 } }
+[2017-01-17 13:29:19.750] [ERROR] ctrl - post Error:not authorized on blog_express to execute command { find: "posts", filter: { type.type: "post", release_state: 1 }, sort: { is_top: -1, create_date: -1 } }
+[2017-01-17 13:52:37.361] [ERROR] ctrl - library Error:not authorized on blog_express to execute command { find: "libraries", filter: { state: 1 } }
+[2017-01-17 13:52:48.846] [ERROR] ctrl - library Error:not authorized on blog_express to execute command { find: "libraries", filter: { state: 1 } }
+[2017-01-17 13:52:51.457] [ERROR] ctrl - post Error:not authorized on blog_express to execute command { find: "posts", filter: { type.type: "post", release_state: 1 }, sort: { is_top: -1, create_date: -1 } }
+[2017-01-17 13:52:52.189] [ERROR] ctrl - post Error:not authorized on blog_express to execute command { find: "posts", filter: { type.type: "demo", release_state: 1 }, sort: { is_top: -1, create_date: -1 } }
+[2017-01-17 13:52:52.814] [ERROR] ctrl - post Error:not authorized on blog_express to execute command { find: "posts", filter: { type.type: "suji", release_state: 1 }, sort: { is_top: -1, create_date: -1 } }
+[2017-01-17 13:53:06.122] [ERROR] ctrl - post Error:not authorized on blog_express to execute command { find: "posts", filter: { type.type: "suji", release_state: 1 }, sort: { is_top: -1, create_date: -1 } }
+[2017-01-17 13:53:06.127] [ERROR] ctrl - library Error:not authorized on blog_express to execute command { find: "libraries", filter: { state: 1 } }
+[2017-01-17 13:53:07.283] [ERROR] ctrl - post Error:not authorized on blog_express to execute command { find: "posts", filter: { type.type: "suji", release_state: 1 }, sort: { is_top: -1, create_date: -1 } }
+[2017-01-17 13:53:07.286] [ERROR] ctrl - library Error:not authorized on blog_express to execute command { find: "libraries", filter: { state: 1 } }
+[2017-01-17 13:53:09.567] [ERROR] ctrl - post Error:not authorized on blog_express to execute command { find: "posts", filter: { type.type: "post", release_state: 1 }, sort: { is_top: -1, create_date: -1 } }
+[2017-01-17 13:53:10.164] [ERROR] ctrl - post Error:not authorized on blog_express to execute command { find: "posts", filter: { type.type: "demo", release_state: 1 }, sort: { is_top: -1, create_date: -1 } }
+[2017-01-17 13:53:10.712] [ERROR] ctrl - post Error:not authorized on blog_express to execute command { find: "posts", filter: { type.type: "suji", release_state: 1 }, sort: { is_top: -1, create_date: -1 } }
+[2017-01-17 13:53:11.299] [ERROR] ctrl - leaveList Error:not authorized on blog_express to execute command { find: "leaves", filter: { state: 1 }, sort: { create_date: -1 } }
+[2017-01-17 13:53:16.893] [ERROR] ctrl - post Error:not authorized on blog_express to execute command { find: "posts", filter: { type.type: "demo", release_state: 1 }, sort: { is_top: -1, create_date: -1 } }
+[2017-01-17 13:53:17.535] [ERROR] ctrl - post Error:not authorized on blog_express to execute command { find: "posts", filter: { type.type: "post", release_state: 1 }, sort: { is_top: -1, create_date: -1 } }
+[2017-01-17 13:54:39.909] [ERROR] ctrl - post Error:not authorized on blog_express to execute command { find: "posts", filter: { type.type: "post", release_state: 1 }, sort: { is_top: -1, create_date: -1 } }
+[2017-01-17 13:54:39.914] [ERROR] ctrl - library Error:not authorized on blog_express to execute command { find: "libraries", filter: { state: 1 } }
+[2017-01-17 13:54:42.980] [ERROR] ctrl - post Error:not authorized on blog_express to execute command { find: "posts", filter: { type.type: "demo", release_state: 1 }, sort: { is_top: -1, create_date: -1 } }
+[2017-01-17 13:54:43.583] [ERROR] ctrl - post Error:not authorized on blog_express to execute command { find: "posts", filter: { type.type: "suji", release_state: 1 }, sort: { is_top: -1, create_date: -1 } }
+[2017-01-17 13:55:24.557] [ERROR] ctrl - library Error:not authorized on blog_express to execute command { find: "libraries", filter: { state: 1 } }
+[2017-01-17 13:55:25.028] [ERROR] ctrl - library Error:not authorized on blog_express to execute command { find: "libraries", filter: { state: 1 } }
+[2017-01-17 13:59:12.568] [ERROR] ctrl - library Error:not authorized on blog_express to execute command { find: "libraries", filter: { state: 1 } }
+[2017-01-17 14:00:01.899] [ERROR] ctrl - library Error:not authorized on blog_express to execute command { find: "libraries", filter: { state: 1 } }
+[2017-01-17 14:00:04.215] [ERROR] ctrl - library Error:not authorized on blog_express to execute command { find: "libraries", filter: { state: 1 } }
+[2017-01-17 14:05:15.735] [ERROR] ctrl - library Error:not authorized on blog_express to execute command { find: "libraries", filter: { state: 1 } }
+[2017-01-17 14:05:19.846] [ERROR] ctrl - post Error:not authorized on blog_express to execute command { find: "posts", filter: { type.type: "post", release_state: 1 }, sort: { is_top: -1, create_date: -1 } }
+[2017-01-17 14:05:20.407] [ERROR] ctrl - post Error:not authorized on blog_express to execute command { find: "posts", filter: { type.type: "demo", release_state: 1 }, sort: { is_top: -1, create_date: -1 } }
+[2017-01-17 14:08:46.562] [ERROR] ctrl - library Error:not authorized on blog_express to execute command { find: "libraries", filter: { state: 1 } }
+[2017-01-17 14:09:44.889] [ERROR] ctrl - library Error:not authorized on blog_express to execute command { find: "libraries", filter: { state: 1 } }
+[2017-01-17 14:10:18.842] [ERROR] ctrl - library Error:not authorized on blog_express to execute command { find: "libraries", filter: { state: 1 } }
+[2017-01-17 14:17:15.240] [ERROR] ctrl - library Error:not authorized on blog_express to execute command { find: "libraries", filter: { state: 1 } }
+[2017-01-17 14:18:28.117] [ERROR] ctrl - library Error:not authorized on blog_express to execute command { find: "libraries", filter: { state: 1 } }
+[2017-01-17 14:18:29.016] [ERROR] ctrl - library Error:not authorized on blog_express to execute command { find: "libraries", filter: { state: 1 } }
+[2017-01-17 14:18:29.768] [ERROR] ctrl - library Error:not authorized on blog_express to execute command { find: "libraries", filter: { state: 1 } }
+[2017-01-17 14:18:30.466] [ERROR] ctrl - library Error:not authorized on blog_express to execute command { find: "libraries", filter: { state: 1 } }
+[2017-01-17 14:19:56.355] [ERROR] ctrl - library Error:not authorized on blog_express to execute command { find: "libraries", filter: { state: 1 } }
+[2017-01-17 14:19:57.220] [ERROR] ctrl - library Error:not authorized on blog_express to execute command { find: "libraries", filter: { state: 1 } }
+[2017-01-17 14:19:58.025] [ERROR] ctrl - library Error:not authorized on blog_express to execute command { find: "libraries", filter: { state: 1 } }
+[2017-01-17 14:20:01.657] [ERROR] ctrl - post Error:not authorized on blog_express to execute command { find: "posts", filter: { type.type: "demo", release_state: 1 }, sort: { is_top: -1, create_date: -1 } }
+[2017-01-17 14:20:06.669] [ERROR] ctrl - login Error:not authorized on blog_express to execute command { find: "editors", filter: { username: "linkenliu" }, limit: 1, batchSize: 1, singleBatch: true }
+[2017-01-17 14:28:50.301] [ERROR] ctrl - library Error:not authorized on blog_express to execute command { find: "libraries", filter: { state: 1 } }
+[2017-01-17 14:28:52.845] [ERROR] ctrl - library Error:not authorized on blog_express to execute command { find: "libraries", filter: { state: 1 } }
+[2017-01-17 14:28:54.722] [ERROR] ctrl - library Error:not authorized on blog_express to execute command { find: "libraries", filter: { state: 1 } }
+[2017-01-17 14:31:13.813] [ERROR] ctrl - library Error:not authorized on blog_express to execute command { find: "libraries", filter: { state: 1 } }
+[2017-01-17 14:31:16.301] [ERROR] ctrl - library Error:not authorized on blog_express to execute command { find: "libraries", filter: { state: 1 } }
+[2017-01-17 14:31:29.717] [ERROR] ctrl - library Error:not authorized on blog_express to execute command { find: "libraries", filter: { state: 1 } }
+[2017-01-17 14:31:39.135] [ERROR] ctrl - library Error:not authorized on blog_express to execute command { find: "libraries", filter: { state: 1 } }
+[2017-01-17 14:31:39.571] [ERROR] ctrl - library Error:not authorized on blog_express to execute command { find: "libraries", filter: { state: 1 } }
+[2017-01-17 14:36:20.417] [ERROR] ctrl - library Error:not authorized on blog_express to execute command { find: "libraries", filter: { state: 1 } }
+[2017-01-17 14:55:41.507] [ERROR] ctrl - library Error:not authorized on blog_express to execute command { find: "libraries", filter: { state: 1 } }
+[2017-01-17 15:00:40.430] [ERROR] ctrl - library Error:not authorized on blog_express to execute command { find: "libraries", filter: { state: 1 } }
+[2017-01-17 15:00:43.030] [ERROR] ctrl - library Error:not authorized on blog_express to execute command { find: "libraries", filter: { state: 1 } }
+[2017-01-17 15:03:51.799] [ERROR] ctrl - library Error:not authorized on blog_express to execute command { find: "libraries", filter: { state: 1 } }
+[2017-01-17 15:06:37.829] [ERROR] ctrl - library Error:not authorized on blog_express to execute command { find: "libraries", filter: { state: 1 } }
+[2017-01-17 15:21:22.722] [ERROR] ctrl - library Error:not authorized on blog_express to execute command { find: "libraries", filter: { state: 1 } }
+[2017-01-17 15:22:36.885] [ERROR] ctrl - library Error:not authorized on blog_express to execute command { find: "libraries", filter: { state: 1 } }
+[2017-01-17 15:24:14.801] [ERROR] ctrl - post Error:not authorized on blog_express to execute command { find: "posts", filter: { type.type: "post", release_state: 1 }, sort: { is_top: -1, create_date: -1 } }
+[2017-01-17 15:24:14.831] [ERROR] ctrl - library Error:not authorized on blog_express to execute command { find: "libraries", filter: { state: 1 } }
+[2017-01-17 15:30:09.856] [ERROR] ctrl - post Error:not authorized on blog_express to execute command { find: "posts", filter: { type.type: "post", release_state: 1 }, sort: { is_top: -1, create_date: -1 } }
+[2017-01-17 15:30:09.858] [ERROR] ctrl - library Error:not authorized on blog_express to execute command { find: "libraries", filter: { state: 1 } }
+[2017-01-17 15:37:04.596] [ERROR] ctrl - library Error:not authorized on blog_express to execute command { find: "libraries", filter: { state: 1 } }
+[2017-01-17 15:37:43.875] [ERROR] ctrl - library Error:not authorized on blog_express to execute command { find: "libraries", filter: { state: 1 } }
+[2017-01-17 16:31:21.976] [ERROR] ctrl - post Error:not authorized on blog_express to execute command { find: "posts", filter: { type.type: "post", release_state: 1 }, sort: { is_top: -1, create_date: -1 } }
+[2017-01-17 16:31:22.834] [ERROR] ctrl - post Error:not authorized on blog_express to execute command { find: "posts", filter: { type.type: "demo", release_state: 1 }, sort: { is_top: -1, create_date: -1 } }
+[2017-01-17 16:31:23.550] [ERROR] ctrl - post Error:not authorized on blog_express to execute command { find: "posts", filter: { type.type: "suji", release_state: 1 }, sort: { is_top: -1, create_date: -1 } }
+[2017-01-17 16:31:24.324] [ERROR] ctrl - leaveList Error:not authorized on blog_express to execute command { find: "leaves", filter: { state: 1 }, sort: { create_date: -1 } }
+[2017-01-17 16:32:42.887] [ERROR] ctrl - library Error:not authorized on blog_express to execute command { find: "libraries", filter: { state: 1 } }
+[2017-01-17 16:37:36.311] [ERROR] ctrl - library Error:not authorized on blog_express to execute command { find: "libraries", filter: { state: 1 } }
+[2017-01-17 16:45:58.194] [ERROR] ctrl - library Error:not authorized on blog_express to execute command { find: "libraries", filter: { state: 1 } }
+[2017-01-17 16:46:00.424] [ERROR] ctrl - library Error:not authorized on blog_express to execute command { find: "libraries", filter: { state: 1 } }
+[2017-01-17 16:46:19.149] [ERROR] ctrl - library Error:not authorized on blog_express to execute command { find: "libraries", filter: { state: 1 } }
+[2017-01-17 16:46:48.546] [ERROR] ctrl - library Error:not authorized on blog_express to execute command { find: "libraries", filter: { state: 1 } }
+[2017-01-17 16:46:52.116] [ERROR] ctrl - library Error:not authorized on blog_express to execute command { find: "libraries", filter: { state: 1 } }
+[2017-01-17 16:51:22.601] [ERROR] ctrl - library Error:not authorized on blog_express to execute command { find: "libraries", filter: { state: 1 } }
+[2017-01-17 16:53:54.220] [ERROR] ctrl - library Error:not authorized on blog_express to execute command { find: "libraries", filter: { state: 1 } }
+[2017-01-17 16:53:56.612] [ERROR] ctrl - post Error:not authorized on blog_express to execute command { find: "posts", filter: { type.type: "post", release_state: 1 }, sort: { is_top: -1, create_date: -1 } }
+[2017-01-17 17:30:55.930] [ERROR] ctrl - library Error:not authorized on blog_express to execute command { find: "libraries", filter: { state: 1 } }
+[2017-01-17 17:31:12.137] [ERROR] ctrl - library Error:not authorized on blog_express to execute command { find: "libraries", filter: { state: 1 } }
+[2017-01-17 17:31:12.625] [ERROR] ctrl - library Error:not authorized on blog_express to execute command { find: "libraries", filter: { state: 1 } }
+[2017-01-17 17:32:13.247] [ERROR] ctrl - library Error:not authorized on blog_express to execute command { find: "libraries", filter: { state: 1 } }
+[2017-01-17 17:32:15.484] [ERROR] ctrl - library Error:not authorized on blog_express to execute command { find: "libraries", filter: { state: 1 } }

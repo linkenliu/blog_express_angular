@@ -15,10 +15,12 @@ const mongoose = require('mongoose'),
     extend = require('mongoose-schema-extend');
 
 
-const connect =  ()=> {mongoose.connect(config.mongoDB,{server: {socketOptions: {keepAlive: 1}}});};connect();
-autoIncrement.initialize(mongoose.connection);
+
+const connect =  ()=> {mongoose.connect(config.mongoDB,config.options)};
+connect();
 mongoose.connection.on('error', console.error.bind(console, 'connection error:'));
 mongoose.connection.on('disconnected', connect);
+autoIncrement.initialize(mongoose.connection);
 
 
 const  homeAPI = require('./routes/homeAPI');

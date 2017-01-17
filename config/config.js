@@ -6,7 +6,14 @@ module .exports = {
         "accessKey":"DCqIYmhHuIgLdfUWpcn4Lzo-1QZ1juBALUTFVTkb",
         "secretKey":"Bp7Io4kyOOmN9HEiFJ8GNhKfcUk9fV6IDywtEuC0"
     },
-    "mongoDB":"mongodb://127.0.0.1:27017/blog_express",
+    "mongoDB":"mongodb://127.0.0.1:27017/blog_express?authSource=admin",
+    options : {
+        db: { native_parser: true },
+        server: { poolSize: 5 },
+        replset: { rs_name: 'userAdmin' },
+        user: 'root',
+        pass: 'tiger'
+    },
     "redisDB": {
         "dbhost": "127.0.0.1",
         "port": 6379,
