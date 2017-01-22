@@ -23,8 +23,8 @@ exports.post = (req, res)=> {
     let type = req.query.type;
     let chid = req.query.chid;
     let index = req.query.pageIndex;
-    let pageSize = req.query.pageSize;
-    let pageIndex = index == null ? 1 : (index - 1) * pageSize;
+    let pageSize = req.query.pageSize?req.query.pageSize:20;
+    let pageIndex = index == null ? 0 : (index - 1) * pageSize;
     if (!type) {
         responseObj.errMsg(false, 'type is empty');
         return res.send(responseObj);
