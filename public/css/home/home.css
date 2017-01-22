@@ -403,7 +403,6 @@ div.suji_container div.item:hover {
     min-height: 1000px;
     background-color: #fff;
     padding: 20px;
-    opacity: 0.9;
     border-radius: 25px 25px 0px 0px;
 }
 
@@ -580,6 +579,12 @@ div.suji_container div.item:hover {
     margin-top: 10px;
     padding: 10px 80px;
 }
+
+.pages{ width:100%; text-align:center; margin: 20px 0;}
+.pages a{ color: #fff;font-size:14px;background:#000; padding:6px 14px;border-left: 1px solid #000 ;text-decoration:none}
+.pages span.current{ font-size:14px; background:green;  text-decoration:none;border-left: 1px solid #000 ;}
+.pages span{color: #fff;  background:#000;padding:6px 14px; border-left: 1px solid #000 ;}
+.pages a:hover{ background:#7AB63F; color:#fff;}
 
 @media (max-width: 768px) {
     .home-article .home-article-item {

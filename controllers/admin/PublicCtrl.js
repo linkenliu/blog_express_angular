@@ -6,6 +6,7 @@ const Model = require('../../models/Model'),
     config = require('../../config/config'),
     toMarkdown = require('to-markdown'),
     logger = require('../../utils/logger.js').getLogger('ctrl'),
+    commonUtil = require('../../utils/commonUtil'),
     Response = require('../../utils/responseObj');
 
 
@@ -85,6 +86,9 @@ exports.findModel = (req, res)=> {
         let object = yield Model.getModel(model).findOne({"_id": _id});
         if (model == 'post') {
             object.content = toMarkdown(object.content);
+        }
+        if(model == 'editor' && object && object.password) {
+            object.password = commonUtil.decrypt(object.password);
         }
         responseObj.data[model] = object;
         return res.send(responseObj);

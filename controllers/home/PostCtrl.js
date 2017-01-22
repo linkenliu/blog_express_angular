@@ -22,6 +22,9 @@ exports.post = (req, res)=> {
     let responseObj = Response();
     let type = req.query.type;
     let chid = req.query.chid;
+    let index = req.query.pageIndex;
+    let pageSize = req.query.pageSize;
+    let pageIndex = index == null ? 1 : (index - 1) * pageSize;
     if (!type) {
         responseObj.errMsg(false, 'type is empty');
         return res.send(responseObj);
@@ -31,11 +34,15 @@ exports.post = (req, res)=> {
     };
     if (chid) params['type.channel'] = chid;
     co(function*() {
-        let posts = yield PostModel.find(params).populate('Channel type.channel', 'name').where({release_state: 1}).sort({
-            is_top: -1,
-            create_date: -1
-        }).exec();
+        let [posts,postCount] = yield Promise.all([
+            PostModel.find(params).populate('Channel type.channel', 'name').skip(parseInt(pageIndex)).limit(parseInt(pageSize)).where({release_state: 1}).sort({
+                is_top: -1,
+                create_date: -1
+            }).exec(),
+            PostModel.count(params).populate('Channel type.channel', 'name').where({release_state: 1})
+        ]);
         responseObj.data.posts = posts;
+        responseObj.data.postCount = postCount;
         return res.send(responseObj);
     }).catch(err=> {
         logger.error('post Error:' + err.message);

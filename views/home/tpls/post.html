@@ -6,46 +6,24 @@
                    {{item.create_date | date:'MM-dd HH:mm'}}
            </div>
        </div>
-      <!-- <div class="pagination col-sm-12">
-           <ul style="display: inline-block;margin-bottom:0;margin-left:0">
-               <li ><a href="javascript:;"><span class="hidden-480">Prev</span></a></li>
-               <li ><a href="javascript:;">1</a></li>
-               <li ><a href="javascript:;">2</a></li>
-               <li ><a href="javascript:;">3</a></li>
-               <li ><a href="javascript:;">4</a></li>
-               <li ><a href="javascript:;">5</a></li>
-               <li ><a href="javascript:;"><span class="hidden-480">Next</span> </a></li>
-           </ul>
-       </div>-->
-       <div ng-if="posts.length<1">
-           <h1 style="text-align: center;color: #fff">暂无此帖</h1>
-       </div>
+
+       <page-pagination conf="paginationConf"></page-pagination>
    </div>
 </div>
-
-
 <style>
-    .pagination{
-        margin: 20px 0;
-        text-align: center;
-    }
-    .pagination ul>li{
-        display: inline
-    }
-    .pagination ul>li>a, .pagination ul>li>span {
-        float: left;
-        color: #fff;
-        padding: 4px 12px;
-        line-height: 20px;
-        text-decoration: none;
-        background-color: #000;
-        border: 1px solid #ddd;
-        border-left-width: 0;
-    }
-    .pagination ul>li:nth-child(1)>a{
-        border-left-width: 1px;
-    }
-    .pagination ul>li>a:hover{
-        background-color: #2ECC71;
-    }
+    .page-total{color: #ffffff}
+    .page-total input{background-color: #000000}
+    .page-total select{background-color: #000000}
+    .page-total{display: none}
+    .pagination>li>span{color: #ffffff}
+    .pagination>.active>span{border-color: #2ECC71}
+    .page-list{padding-left: 37px}
+    .page-list .pagination {float:left;}
+    .page-list .pagination span {cursor: pointer;background-color: #000}
+    .page-list .pagination .separate span{cursor: default; border-top:none;border-bottom:none;}
+    .page-list .pagination .separate span:hover {background: none;}
+    .page-list .page-total {float:left; margin: 25px 20px;}
+    .page-list .page-total input, .page-list .page-total select{height: 26px; border: 1px solid #ddd;}
+    .page-list .page-total input {width: 40px; padding-left:3px;}
+    .page-list .page-total select {width: 50px;}
 </style>

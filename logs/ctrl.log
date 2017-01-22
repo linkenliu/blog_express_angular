@@ -206,3 +206,10 @@
 [2017-01-17 17:31:12.625] [ERROR] ctrl - library Error:not authorized on blog_express to execute command { find: "libraries", filter: { state: 1 } }
 [2017-01-17 17:32:13.247] [ERROR] ctrl - library Error:not authorized on blog_express to execute command { find: "libraries", filter: { state: 1 } }
 [2017-01-17 17:32:15.484] [ERROR] ctrl - library Error:not authorized on blog_express to execute command { find: "libraries", filter: { state: 1 } }
+[2017-01-22 15:03:20.671] [ERROR] ctrl - editEditor Error:Bad input string
+[2017-01-22 15:04:51.140] [ERROR] ctrl - editEditor Error:Bad input string
+[2017-01-22 15:06:01.535] [ERROR] ctrl - login Error:Bad input string
+[2017-01-22 15:06:03.947] [ERROR] ctrl - login Error:Bad input string
+[2017-01-22 15:06:11.678] [ERROR] ctrl - login Error:Bad input string
+[2017-01-22 15:06:11.904] [ERROR] ctrl - login Error:Bad input string
+[2017-01-22 15:12:38.530] [ERROR] ctrl - login Error:Bad input string

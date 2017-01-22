@@ -14,10 +14,14 @@ const express = require('express'),
      leaveCtrl = require('./../controllers/admin/LeaveCtrl'),
      editorCtrl = require('./../controllers/admin/EditorCtrl');
 
+router.get('/', (req, res)=> {
+    res.render('admin/login')
+});
 
 router.get('/login', (req, res)=> {
     res.render('admin/login')
 });
+
 
 router.get('/index',(req,res)=>{
    res.render('admin/index');

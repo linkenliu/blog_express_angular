@@ -2,6 +2,7 @@
 const EditorModel = require('../../models/EditorModel'),
     Response = require('../../utils/responseObj'),
     dateUtil = require('../../utils/dateUtil'),
+    commonUtil = require('../../utils/commonUtil'),
     co = require('co');
 
 let editorCtrl = {};
@@ -20,7 +21,7 @@ editorCtrl.login = (req, res)=> {
             responseObj.errMsg(false, '用户名或密码错误!');
             res.send(responseObj)
         }
-        if (password != editor.password) {
+        if (password != commonUtil.decrypt(editor.password)) {
             responseObj.errMsg(false, '用户名或密码错误!');
             res.send(responseObj)
         }
@@ -70,6 +71,7 @@ editorCtrl.findEditor = (req, res)=> {
     }
     co(function*() {
         let editor = yield EditorModel.findOne({_id: _id});
+        if(editor && editor.password) editor.password = commonUtil.decrypt(editor.password);
         responseObj.data.editor = editor;
         res.send(responseObj);
     }).catch(err=> {
@@ -91,6 +93,7 @@ editorCtrl.saveEditor = (req, res) => {
         //edit
         delete object._id;
         co(function*() {
+            if(object && object.password) object.password = commonUtil.encrypt(object.password);
             yield EditorModel.update({_id: _id}, object);
             res.send(responseObj);
         }).catch(err=> {
@@ -102,6 +105,7 @@ editorCtrl.saveEditor = (req, res) => {
         //save
         object.create_date = dateUtil.currentDate();
         object.update_date = dateUtil.currentDate();
+        object.password = commonUtil.encrypt(object.password);
         let newEditor = new EditorModel(object);
         co(function*() {
             yield newEditor.save();

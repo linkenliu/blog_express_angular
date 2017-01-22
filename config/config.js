@@ -3,16 +3,16 @@ module .exports = {
     debug: true,
     service_path:'http://127.0.0.1:7000/',
     "qiniu_config":{
-        "accessKey":"****",
-        "secretKey":"****"
+        "accessKey":"",
+        "secretKey":""
     },
-    "mongoDB":"mongodb://127.0.0.1:27017/***",
+    "mongoDB":"mongodb://username:pass@127.0.0.1:27017/databasename",
     options : {
         db: { native_parser: true },
         server: { poolSize: 5 },
         replset: { rs_name: 'userAdmin' },
-        user: '***',
-        pass: '***'
+        user: 'username',
+        pass: 'pass'
     },
     "redisDB": {
         "dbhost": "127.0.0.1",

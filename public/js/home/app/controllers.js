@@ -15,12 +15,29 @@ angular.module('BlogApp.controllers', [])
 
     }])
     .controller('PostCtrl', ['$scope', '$location', '$http', 'blData', '$stateParams', ($scope, $location, $http, blData, $stateParams) => {
-        let chid = $stateParams._id;
-        myload();
-        blData.requestUrl('GET', 'post', {type: 'post', chid: chid}).then((data)=> {
-            $scope.posts = data.data.posts;
-            myclose();
-        });
+
+
+
+        let loadPost = () =>{
+            let chid = $stateParams._id;
+            $scope.chid = chid;
+            $scope.pageIndex = $scope.paginationConf.currentPage?$scope.paginationConf.currentPage:1;
+            $scope.pageSize = $scope.paginationConf.itemsPerPage?$scope.paginationConf.itemsPerPage:2;
+            myload();
+            blData.requestUrl('GET', 'post', {type: 'post', chid: chid,pageIndex:$scope.pageIndex,pageSize:$scope.pageSize}).then((data)=> {
+                $scope.posts = data.data.posts;
+                $scope.paginationConf.totalItems = data.data.postCount;
+                myclose();
+            });
+        };
+
+        $scope.paginationConf = {
+            currentPage: 1,
+            itemsPerPage: 10,
+        };
+
+        $scope.$watch('paginationConf.currentPage + paginationConf.itemsPerPage', loadPost);
+
     }])
     .controller('DemoCtrl', ['$scope', '$location', '$http', 'blData', ($scope, $location, $http, blData) => {
         myload();
@@ -28,7 +45,6 @@ angular.module('BlogApp.controllers', [])
             $scope.posts = data.data.posts;
             myclose();
         });
-
 
         $scope.$on('ngRepeatFinished', function () {
             $(".demo_container .item .rsp").hide();
