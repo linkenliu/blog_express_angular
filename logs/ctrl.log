@@ -213,3 +213,9 @@
 [2017-01-22 15:06:11.678] [ERROR] ctrl - login Error:Bad input string
 [2017-01-22 15:06:11.904] [ERROR] ctrl - login Error:Bad input string
 [2017-01-22 15:12:38.530] [ERROR] ctrl - login Error:Bad input string
+[2017-01-22 15:42:37.009] [ERROR] ctrl - post Error:fn is not defined
+[2017-01-22 15:42:38.446] [ERROR] ctrl - post Error:fn is not defined
+[2017-01-22 15:42:39.012] [ERROR] ctrl - post Error:fn is not defined
+[2017-01-22 15:42:39.739] [ERROR] ctrl - post Error:fn is not defined
+[2017-01-22 15:42:43.372] [ERROR] ctrl - post Error:fn is not defined
+[2017-01-22 15:42:44.038] [ERROR] ctrl - post Error:fn is not defined

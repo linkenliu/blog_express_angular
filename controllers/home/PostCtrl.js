@@ -33,17 +33,24 @@ exports.post = (req, res)=> {
         'type.type': type
     };
     if (chid) params['type.channel'] = chid;
+
     co(function*() {
-        let [posts,postCount] = yield Promise.all([
-            PostModel.find(params).populate('Channel type.channel', 'name').skip(parseInt(pageIndex)).limit(parseInt(pageSize)).where({release_state: 1}).sort({
-                is_top: -1,
-                create_date: -1
-            }).exec(),
-            PostModel.count(params).populate('Channel type.channel', 'name').where({release_state: 1})
-        ]);
-        responseObj.data.posts = posts;
-        responseObj.data.postCount = postCount;
-        return res.send(responseObj);
+        if('post' == type){
+            let [posts,postCount] = yield Promise.all([
+                PostModel.find(params).populate('Channel type.channel', 'name').skip(parseInt(pageIndex)).limit(parseInt(pageSize)).where({release_state: 1}).sort({
+                    is_top: -1,
+                    create_date: -1
+                }).exec(),
+                PostModel.count(params).populate('Channel type.channel', 'name').where({release_state: 1})
+            ]);
+            responseObj.data.posts = posts;
+            responseObj.data.postCount = postCount;
+            return res.send(responseObj);
+        }else{
+            let posts = yield PostModel.find(params).where({release_state: 1}).exec();
+            responseObj.data.posts = posts;
+            return res.send(responseObj);
+        }
     }).catch(err=> {
         logger.error('post Error:' + err.message);
         responseObj.errMsg(false, err.message);

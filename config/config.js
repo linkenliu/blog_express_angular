@@ -6,13 +6,13 @@ module .exports = {
         "accessKey":"",
         "secretKey":""
     },
-    "mongoDB":"mongodb://username:pass@127.0.0.1:27017/databasename",
+    "mongoDB":"",
     options : {
         db: { native_parser: true },
         server: { poolSize: 5 },
         replset: { rs_name: 'userAdmin' },
-        user: 'username',
-        pass: 'pass'
+        user: '',
+        pass: ''
     },
     "redisDB": {
         "dbhost": "127.0.0.1",

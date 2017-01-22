@@ -42,6 +42,7 @@ angular.module('BlogApp.controllers', [])
     .controller('DemoCtrl', ['$scope', '$location', '$http', 'blData', ($scope, $location, $http, blData) => {
         myload();
         blData.requestUrl('GET', 'post', {type: 'demo'}).then((data)=> {
+            console.log(data)
             $scope.posts = data.data.posts;
             myclose();
         });
